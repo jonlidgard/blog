@@ -1,7 +1,7 @@
 ---
 title: "PRU's on the Beaglebone Black"
 date: 2017-11-21T09:37:57Z
-draft: true
+draft: false
 ---
 
 # PRU’s on the Beaglebone - ( Using UIO with the TI Kernel )
