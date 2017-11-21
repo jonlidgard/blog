@@ -1,4 +1,4 @@
-baseURL = "http://lidders.gitlab.io/blog"
+baseURL = "https://lidders.gitlab.io/blog"
 languageCode = "en-uk"
-title = "My Blog"
+title = "Project Notes"
 theme = "ananke"
