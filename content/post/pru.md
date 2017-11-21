@@ -1,24 +1,26 @@
 ---
+author: "Jon Lidgard"
 title: "PRU's on the Beaglebone Black"
 date: 2017-11-21T09:37:57Z
 draft: false
+weight: 10
 ---
 
-# PRU’s on the Beaglebone - ( Using UIO with the TI Kernel )
+### PRU’s on the Beaglebone - ( Using UIO with the TI Kernel )
 
 This guide is written for fellow newbies to the BBB as an aid to understanding how to talk to the onboard PRU's. As a newbie some of my terminology and understanding may not be quite correct, however it's hopefully enough to give you an idea what is going on. The whole subject is a bit of a minefield for the beginner; a lot of things have changed over the last few years and most of the guides you come across are only partially correct, you have to pick through the bones to find the nuggets!. If you're using a modern stock debian image then blindly following them will lead to nothing but frustration. This guide will surely become irrelevant with time too but hopefully as of Oct 2017 it will be of some use.
 
-# My system
+### My system
 I'm using the stock debian 9.1 IOT image from Beagleboard.org on an old 2GB Beaglebone Black.
 
-# rproc & uio, Kernel images, dtb's, uboot overlays, omg wtf?
+### rproc & uio, Kernel images, dtb's, uboot overlays, omg wtf?
 
 In the beginning there was the Linux Userspace I/O interface (UIO) for communicating with the various onboard devices. There was then a transition over to a new way of communicating known as RPROC. In previous kernels these two were mutually exclusive options. You either decided to use UIO, in which case you needed a 'bone' version of the kernel, or you moved to the new 'rproc' system that TI was pursuing and so used a 'TI' kernel. However the latest TI kernels lets you decide which way you want to go, you can choose either method. (My kernel version is 4.4.88-ti-r125)
 
-# So why stick with UIO if RPROC is the future?
+### So why stick with UIO if RPROC is the future?
 Because UIO is easier to deal with for simple tasks. There are quite a few examples out there on the net using uio but not much on rproc - yet.
 
-# My /boot/uEnv.txt file
+### My /boot/uEnv.txt file
 ```
 #Docs: http://elinux.org/Beagleboard:U-boot_partitioning_layout_2.0
 
@@ -82,7 +84,7 @@ So ignore articles telling you to comment out proc or uio in the .dtb source, re
 What systems you need enabling (hdmi,emc,audio,adc etc) will determing what pins are available to you for GPIO & PRU stuff.
 
 
-# Setting up the build environment
+### Setting up the build environment
 sudo apt-get install pru-software-support-package
 sudo apt-get install ti-pru-cgt-installer
 then add this to /etc/profile.d/ti-pru-cgt.sh
@@ -98,7 +100,7 @@ It's probably easier now to 'su -' to root to do most of this stuff, you can sud
 
 Note: if you need to echo via sudo use: sudo sh -c "echo > ...."
 
-# How do I know everything is configured ok?
+### How do I know everything is configured ok?
 
 First thing to do is a 'lsmod | grep uio' , you should see:
 ```
@@ -126,14 +128,14 @@ PRUSS says 0x12345678 + 0x83719284 = 0x95A5E8FC
 ```
 If it worked, congratulations!, you are talking to the PRU's.
 
-# Getting the PRU to talk to the outside world - Pins!
+### Getting the PRU to talk to the outside world - Pins!
 
 cat $SLOTS
 ```
-0: PF----  -1 
-1: PF----  -1 
-2: PF----  -1 
-3: PF----  -1 
+0: PF----  -1
+1: PF----  -1
+2: PF----  -1
+3: PF----  -1
 ```
 With the above uEnv.txt, all you need to do is either manually load your overlay (.dtbo) file:
 
@@ -154,21 +156,21 @@ CAPE=cape-universal
 
 Now 'cat $SLOTS' - You should now see something like:
 ```
-0: PF----  -1 
- 1: PF----  -1 
- 2: PF----  -1 
- 3: PF----  -1 
+0: PF----  -1
+ 1: PF----  -1
+ 2: PF----  -1
+ 3: PF----  -1
  4: P-O-L-   0 Override Board Name,00A0,Override Manuf,cape-universal
  ```
  This has loaded the universal overlay that configures most of the pins on the bone. There are other overlays available that ignore video, etc. See here: https://github.com/cdsteinkuehler/beaglebone-universal-io
- 
+
 The next bit will make more sense if you download & print out these excellent spreadsheets by Derek Molloy. They show the various modes & different ways of referring to each pin. https://github.com/derekmolloy/boneDeviceTree/tree/master/docs
- 
+
  Ok, We are now going to configure pin P8_11 as an output from the PRU.
 
 cat $PINS | grep 0834
  ```
- pin 13 (44e10834.0) 00000027 pinctrl-single 
+ pin 13 (44e10834.0) 00000027 pinctrl-single
  ```
  This shows that GPIO_13 (P8_11) is currently set as a GPIO input (mode 7). This is what the cape-universal overlay has deemed will be it's default state. We want to change it to a PRU output (mode 6) So:
 
@@ -188,5 +190,3 @@ You can find out more information about what modes are availabe for each pin usi
 Ok now you should use the following article to compile the blinky program to blink an LED attached to P8_11.
 Again be very careful to only follow the instructions for compiling the program. DO NOT ATTEMPT TO USE THE DEVICE OVERLAY FILE (it doesn't work as is & needs modifying to setup the pinmux files) because you've already configured pin P8.11.
  http://www.righto.com/2016/08/pru-tips-understanding-beaglebones.html
- 
-
