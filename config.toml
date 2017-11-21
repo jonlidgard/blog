@@ -1,4 +1,4 @@
-baseURL = "http://jonlidgard.github.io/"
+baseURL = "http://lidders.gitlab.io/blog"
 languageCode = "en-uk"
 title = "My Blog"
 theme = "ananke"
