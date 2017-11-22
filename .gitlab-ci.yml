@@ -6,7 +6,7 @@ before_script:
 
 pages:
   script:
-  - hugo -b /blog/
+  - hugo
   artifacts:
     paths:
     - public
