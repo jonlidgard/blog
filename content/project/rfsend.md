@@ -2,7 +2,7 @@
 title = "RFSend"
 date = 2017-11-22T09:14:50Z
 description = "Controlling Mercury RC-5 433MHz sockets with a Beaglebone PRU"
-categories = "projects"
+categories = ["project"]
 tags = ["433", "home automation", "mercury rc5", "RF"]
 thumbnail = ""
 draft =true
