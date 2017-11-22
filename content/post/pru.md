@@ -1,10 +1,12 @@
----
-author: "Jon Lidgard"
-title: "PRU's on the Beaglebone Black"
-date: 2017-11-21T09:37:57Z
-draft: false
-weight: 10
----
++++
+author = "Jon Lidgard"
+title = "PRU's on the Beaglebone Black"
+date = 2017-11-21T09:37:57Z
+draft = false
+weight = 10
+tags = ["Beaglebone", "PRU"]
+categories = "posts"
++++
 
 ### PRU’s on the Beaglebone - ( Using UIO with the TI Kernel )
 
