@@ -1,4 +1,4 @@
-baseURL = "https://lidders.gitlab.io/blog/"
+#baseURL = "https://lidders.gitlab.io/blog/"
 languageCode = "en-uk"
 title = "Jon's Project Pages"
 theme = "mainroad"
@@ -15,7 +15,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Params]
     subtitle = "" # Subtitle of your site
-    description = " My personal blog" # Description of your site
+    description = "Various projects I've worked on" # Description of your site
     opengraph = true
     readmore = false # Show "Read more" button in list if true
     leftsidebar = false # Move sidebar to the left side if true
@@ -29,4 +29,4 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
     recent_articles = true # Enable "Recent arcticles" widget
     categories = true # Enable "Categories" widget
     tags = true # Enable "Tags" widget
-        tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+    tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
