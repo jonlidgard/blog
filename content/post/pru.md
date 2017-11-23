@@ -7,7 +7,7 @@ weight = 10
 tags = ["Beaglebone", "PRU"]
 keywords = ["Beaglebone", "PRU"]
 categories = ["posts"]
-thumbnail = "/images/bbb.jpg"
+thumbnail = "images/bbb.jpg"
 +++
 
 ### PRU’s on the Beaglebone - ( Using UIO with the TI Kernel )

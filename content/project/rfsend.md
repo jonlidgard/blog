@@ -4,15 +4,15 @@ date = 2017-11-22T09:14:50Z
 description = "Controlling Mercury RC-5 433MHz sockets with a Beaglebone PRU"
 categories = ["projects"]
 tags = ["433", "home automation", "mercury rc5", "RF"]
-thumbnail = "/images/rc5-1.jpg"
+thumbnail = "img/rc5-1.jpg"
 type = "project"
-draft =true
+draft = false
 +++
 
 As well as your Beaglebone you will need a cheap 433mhz transmitter. Ebay is a good
 source.
 
-![Transmitter](https://github.com/jonlidgard/rfsend/blob/master/images/tx.jpg)
+![Transmitter](https://github.com/jonlidgard/rfsend/blob/master/img/tx.jpg)
 
 Connections:
 * Vcc to P9.07 (+5v SYS)
@@ -24,7 +24,7 @@ The Beaglebones, apart from being completely open source, have one big advantage
 rivals such as the Raspberry pi. The AM3358 Sitara processor used contains not only an ARM
 Cortex-A8 but also 2 32 bit 200MHz microcontrollers, known as PRU's (Programmable Realtime Units).
 rfsend uses one of these to create the pulse train for the 433mhz transmitter. They run independently of the main
-processor and are completely deterministic - making them great for doing timing critical
+processor and are compleimgeterministic - making them great for doing timing critical
 tasks such as this.
 
 ## Configuring linux to use the PRU
@@ -100,7 +100,7 @@ Alternatively you could create a custom overlay instead of using cape-universal.
 
 ## Sending the codes
 
-{{< figure src="/images/rf_codes.png" caption="TriState codes output from Mercury Transmitter Fob" attr="" attrlink="" >}}
+{{< figure src="img/rf_codes.png" caption="TriState codes output from Mercury Transmitter Fob" attr="" attrlink="" >}}
 
 The code table above shows the binary code used to control my switches.
 The code consists of 12 tri-state bits and a sync bit.
