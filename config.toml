@@ -1,11 +1,13 @@
-#baseURL = "https://lidders.gitlab.io/blog/"
+baseURL = "https://lidders.gitlab.io/blog/"
 languageCode = "en-uk"
 title = "Jon's Project Pages"
 theme = "mainroad"
 paginate = "10" # Number of posts per page
 
 disqusShortname = "jons-blog-2" # Enable comments by entering your Disqus shortname
-googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+googleAnalytics = "UA-110082355-1" # Enable Google Analytics by entering your tracking id
+
+canonifyURLs = true
 
 [Author]
     name = "Jon Lidgard"
@@ -17,7 +19,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
     subtitle = "" # Subtitle of your site
     description = "Various projects I've worked on" # Description of your site
     opengraph = true
-    readmore = false # Show "Read more" button in list if true
+    readmore = true # Show "Read more" button in list if true
     leftsidebar = false # Move sidebar to the left side if true
     authorbox = false
     post_navigation = true
