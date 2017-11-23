@@ -8,6 +8,7 @@ disqusShortname = "jons-blog-2" # Enable comments by entering your Disqus shortn
 googleAnalytics = "UA-110082355-1" # Enable Google Analytics by entering your tracking id
 
 canonifyURLs = true
+relativeURLs = true
 
 [Author]
     name = "Jon Lidgard"
