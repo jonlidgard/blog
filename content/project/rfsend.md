@@ -6,7 +6,7 @@ categories = ["projects"]
 tags = ["433", "home automation", "mercury rc5", "RF"]
 thumbnail = "img/rc5-1.jpg"
 type = "project"
-draft = false
+draft = true
 +++
 
 As well as your Beaglebone you will need a cheap 433mhz transmitter. Ebay is a good
