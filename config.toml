@@ -1,4 +1,4 @@
-baseURL = "https://lidders.gitlab.io/blog/"
+baseURL = "https://jon.lidgard.uk" # "https://lidders.gitlab.io/blog/"
 languageCode = "en-uk"
 title = "Jon's Project Pages"
 theme = "mainroad"
@@ -9,6 +9,7 @@ googleAnalytics = "UA-110082355-1" # Enable Google Analytics by entering your tr
 
 canonifyURLs = true
 relativeURLs = true
+uglyURLs = true
 
 [Author]
     name = "Jon Lidgard"
