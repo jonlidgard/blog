@@ -7,9 +7,9 @@ paginate = "10" # Number of posts per page
 disqusShortname = "jons-blog-2" # Enable comments by entering your Disqus shortname
 googleAnalytics = "UA-110082355-1" # Enable Google Analytics by entering your tracking id
 
-canonifyURLs = true
-relativeURLs = true
-uglyURLs = true
+#canonifyURLs = true
+#relativeURLs = true
+#uglyURLs = true
 
 [Author]
     name = "Jon Lidgard"
