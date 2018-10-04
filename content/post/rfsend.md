@@ -37,7 +37,7 @@ So, as well as your Beaglebone, you will need to source a 433MHz transmitter, th
 ## Configuring linux to use the PRU
 
 Looking at the transmitter PCB I can see that A0 - A4 are hard wired to form an address, Here's the
-group address for my transitter - your's will probably be different:
+group address for my transmitter - your's will probably be different:
 
 Pin |Connection |Tri-State| Binary
  ---|----------|----------|----

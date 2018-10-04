@@ -2,7 +2,6 @@
 title = "Cross Compiling wiringPi on Mac OSX using Docker"
 date = 2018-10-03T09:00:00Z
 tags = ["wiringpi","arm","osx"]
-author = "Jon Lidgard"
 draft = false
 weight = 10
 categories = ["posts"]
@@ -190,3 +189,4 @@ Remember to chmod +x ./build-script then:
 ```bash
 docker run -it -v `pwd`:/build mitchallen/pi-cross-compile ./build-examples
 ```
+
