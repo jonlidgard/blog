@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://jonlidgard.netlify.com/* http://jonsblog.lidgard.uk/:splat 301!
