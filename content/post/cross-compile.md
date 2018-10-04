@@ -1,24 +1,33 @@
----
-layout: default
-title: "Cross Compiling wiringPi on Mac OSX using Docker"
-date: 2018-10-03T09:00:00Z
-tags: ["wiringpi","arm","osx"]
----
++++
+title = "Cross Compiling wiringPi on Mac OSX using Docker"
+date = 2018-10-03T09:00:00Z
+tags = ["wiringpi","arm","osx"]
+author = "Jon Lidgard"
+draft = false
+weight = 10
+categories = ["posts"]
+thumbnail = "img/rpi.jpg"
++++
 
-# Cross Compiling wiringPi on Mac OSX using Docker
 For a gentle introduction to cross compiling for the pi with Docker try [here](https://desertbot.io/blog/how-to-cross-compile-for-raspberry-pi)
 
 First we need a Docker image with the cross compilation tools installed, so we'll grab the one from above:
 
-`docker pull mitchallen/pi-cross-compile`
+```
+docker pull mitchallen/pi-cross-compile
+```
 
 Create the build directory & cd into it
 
-`git clone git://git.drogon.net/wiringPi`
+```
+git clone git://git.drogon.net/wiringPi
+```
 
 Create a lib structure
 
-`mkdir -p usr/local/bin usr/local/lib usr/local/include usr/lib`
+```
+mkdir -p usr/local/bin usr/local/lib usr/local/include usr/lib
+```
 
 Even though we use the pitools version of ldconfig it still looks in /etc/ld.so.conf.d for the
 libraries to cache. These are the Ubuntu x86 libs of the host os & not the Arm ones. 

@@ -2,11 +2,10 @@
 title = "RF Socket Control with the Beaglebone Black"
 date = 2017-11-22T09:14:50Z
 description = "Controlling Mercury RC-5 433MHz sockets with a Beaglebone PRU"
-categories = ["projects"]
 tags = ["433", "home automation", "mercury rc5", "RF"]
 thumbnail = "img/rc5-1.jpg"
-type = "project"
-draft = true
+type = "post"
+draft = false
 +++
 
 This article describes how to use the Beaglebone black to communicate with cheap remote control
