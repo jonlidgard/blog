@@ -1,4 +1,4 @@
-image: monachus/hugo
+image: fundor333/hugo
 
 before_script:
   - git submodule init
