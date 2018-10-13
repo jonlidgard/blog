@@ -44,3 +44,8 @@ sudo chmod 666 /Users/jon/sdcard.vmdk; sudo chmod 666 /dev/disk2
 
 Here's a [link](https://blog.lobraun.de/2015/06/06/mount-sd-cards-within-virtualbox-on-mac-os-x/) to another blog post on the subject. The author has written a script to automate much of the process:
 The author has written a [script](http://www.lobraun.de/downloads/create-sd-card-vmdk.sh) to automate much of the process:
+
+I copied the script to my ~/VirtualBox VMs/ directory & remember to chmod +x it (after you've checked it through of course!)
+```
+./create-sd-card-vmdk.sh </dev/diskX> <vmdk-file> <virtual-machine>
+```
