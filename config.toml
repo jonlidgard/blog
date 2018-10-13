@@ -1,5 +1,5 @@
 baseURL = "http://jonsblog.lidgard.uk"
-languageCode = "en-uk"
+languageCode = "en-gb"
 title = "Jon's Project Pages"
 theme = "mainroad"
 paginate = "10" # Number of posts per page
@@ -7,38 +7,42 @@ paginate = "10" # Number of posts per page
 disqusShortname = "jons-blog-2" # Enable comments by entering your Disqus shortname
 googleAnalytics = "UA-110082355-1" # Enable Google Analytics by entering your tracking id
 
+
 #canonifyURLs = true
 #relativeURLs = true
 #uglyURLs = true
 
 [Author]
    name = "Jon Lidgard"
-   bio = "my bio"
+   bio = "Commercial Pilot & hobyist hacker interested in microcontrollers & home automation"
    gravatar = "jonlidgard@gmail.com"
 #   photo = "https://www.gravatar.com/avatar/{{ md5 "jonlidgard@gmail.com" }}?s=100&d=identicon"
    
 
-
-#[P
-
-#<img alt="{{ $.Site.Author.name }} avatar" src="https://www.gravatar.com/avatar/{{ md5 "jonlidgard@gmail.com" }}?s=100&d=identicon" class="avatar" height="90" width="90">
-
-
-
 [Params]
-    subtitle = "" # Subtitle of your site
-    description = "Various projects I've worked on" # Description of your site
+    subtitle = "Mini projects using microcontrollers" 
+    description = "If I don't write it down somewhere I've forgotten it by next week!"
     opengraph = true
     readmore = true # Show "Read more" button in list if true
     leftsidebar = false # Move sidebar to the left side if true
     authorbox = false
     post_navigation = true
     postSections = ["post"]
-    #"img/avatar.png"
+
 
 [Params.widgets]
+    recent_num = 5 # Set the number of articles in the "Recent articles" widget
     search = false # Enable "Search" widget
     recent_articles = true # Enable "Recent arcticles" widget
     categories = true # Enable "Categories" widget
     tags = true # Enable "Tags" widget
     tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+
+
+[Params.sidebar]
+  home = "right"   # Configure layout for home page
+  list = "right"   # Configure layout for list pages
+  single = "right" # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["recent", "categories", "taglist"]
+
