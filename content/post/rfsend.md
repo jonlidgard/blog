@@ -5,6 +5,7 @@ description = "Controlling Mercury RC-5 433MHz sockets with a Beaglebone PRU"
 tags = ["433", "home automation", "mercury rc5", "RF"]
 thumbnail = "img/rc5-1.jpg"
 type = "post"
+categories = ["posts"]
 draft = false
 +++
 
